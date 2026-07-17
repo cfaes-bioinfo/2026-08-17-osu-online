@@ -9,7 +9,7 @@ language: "en"     # lowercase two-letter ISO language code such as "fr" (see ht
 latitude: "39.997341"     # decimal latitude of workshop venue - this should be a number greater than or equal to -90, and less than or equal to 90 (use https://www.latlong.net/)
 longitude: "-83.014549"    # decimal longitude of the workshop venue - this should be a number greater than or equal to -180, and less than or equal to 180 (use https://www.latlong.net)
 humandate: "August 17 and 21, 2026"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "9 am – 3 pm EST (August 17) and 11 am - 4 PM EST (August 21)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+humantime: "9 am – 3 pm EST (August 17) and 11 am - 4 PM EST (August 21)."    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 startdate: 2026-08-17      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2026-08-21        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Matthew Thompson", "Jelmer Poelstra", "Elizabeth Campolongo", "Jessica Cooperstone", "Horacio Lopez-Nicora"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -279,12 +279,12 @@ address.
             <p id="requirements">
             {% if online == "false" %}
                 Participants must bring a laptop with a
-                Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+                Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.).
             {% else %}
                 Participants must have access to a computer with a
-                Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+                Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.).
             {% endif %}
-            They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+            They should make sure have have several software packages installed prior to the workshop. These installations can also be done for Ohio State managed computers. See the <a href="#setup">setup instructions below</a>.
             </p>
         </dd>  
     </div>
@@ -335,7 +335,7 @@ address.
             <p id="recordings">
             Carpentries workshops are designed to be interactive rather than lecture-based, with lessons that build upon one another.
             To foster a positive online learning environment, we strongly recommend that participants join in real time.
-            As a result, workshop recordings are not recommended and may not be available to learners.
+            Therefore, this workshop will not be recorded.
             </p>
         </dd>
     </div>
@@ -515,18 +515,7 @@ of code below the Schedule `<h2>` header below with
 <div class="card mb-2">
   <h5 class="card-header">Schedule</h5>
   <div class="card-body">
-    {% assign schedule_file = site.carpentry | append: '/schedule.html' %}
-    {% if isOfficial %}
-    {% include {{ schedule_file }} %}
-    {% elsif site.carpentry == "incubator" %}
-    This workshop is teaching a lesson in <a href="https://carpentries-incubator.org/">The Carpentries Incubator</a>.
-    Please check <a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for a list of lesson sections and estimated timings.
-    {% endif %}
-
-    {% comment %}
-    Edit/replace the text above if you want to include a schedule table.
-    See the contents of the _includes/custom-schedule.html file for an example of how one of these schedule tables is constructed.
-    {% endcomment %}
+    {% include custom-schedule.html %}
 
     {% if site.pilot %}
     The lesson taught in this workshop is being piloted and a precise schedule is yet to be established.
@@ -563,13 +552,29 @@ please preview your site before committing, and make sure to run
   High Performance Computing Carpentry
   {% endif %}
   workshop, you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
-</p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors that may be useful on the
-  <a href="{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
+ <div class="callout">
+   <h3>Setup Virtual Office Hour</h3>
+
+  <p>
+     Need help with the setup described below?
+     We'll be holding a live virtual office hour to assist with setup and help troubleshoot.
+   </p>
+
+   <p>
+     <strong>When:</strong><br>
+     TBA, August X, 2026<br>
+     TBA Eastern Time
+   </p>
+
+   <p>
+     <strong>Where:</strong><br>
+     <a href="Zoom link TBA" target="_blank" rel="noopener">
+       Join via Zoom
+     </a>
+   </p>
+</div>
 
 {% comment %}
 For online workshops, the section below provides:
