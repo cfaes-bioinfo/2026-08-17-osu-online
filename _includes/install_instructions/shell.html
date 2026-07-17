@@ -1,3 +1,13 @@
+<style>
+  .callout {
+    border-left: 4px solid #007acc;
+    background-color: #f0f8ff;
+    padding: 1em;
+    margin: 1em 0;
+    font-size: 90%;
+  }
+</style>
+
 <div class="card mb-2" id="shell">
   <div class="card-header d-flex align-items-center justify-content-between">
     <h5>The Bash Shell</h5>
@@ -12,6 +22,11 @@
       Bash is a commonly-used shell that gives you the power to do tasks more quickly.
       Instructions for finding and opening a shell on your operating system can be found in the Software Carpentry <a href="https://swcarpentry.github.io/shell-novice/index.html#open-a-new-shell">shell-novice lesson</a>.
       <article role="tabpanel" class="tab-pane outer-tab active" id="shell-windows">
+
+        <div class="callout">
+          <p>👉 If your computer is owned by The Ohio State University (i.e. it's a "managed device"), you cannot use WSL or WSL 2 due to policy restrictions. Skip to the Git for Windows instructions! <br></p>
+        </div>
+
         <p>Two options are available for setting up your device so that you’re ready to learn in our workshops with Microsoft Windows.</p>
 
         <p>The first is Git for Windows (often referred to as “Git Bash”), and the second is Windows Subsystem for Linux v2 (“WSL 2”).</p>
@@ -303,4 +318,80 @@
       </article>
     </div>
   </div>
+</div>
+
+<div id="shell-ssh" class="callout">
+    <h3>SSH Setup for GitHub</h3>
+
+    <p>
+      For working with GitHub remotes, we recommend using Secure Shell Protocol (SSH) keys.
+      Guidance for this is available
+      <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">here</a>.
+    </p>
+
+    <p>We recommend reading and following these portions in preparation for the workshop:</p>
+
+    <ul>
+      <li>
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh">
+          About SSH
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys">
+          Checking for existing SSH keys
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">
+          Generating a new SSH key and adding it to the ssh-agent
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">
+          Adding a new SSH key to your GitHub account
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection">
+          Testing your SSH connection
+        </a>
+      </li>
+      <li>
+        (optionally)
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases">
+          Working with SSH key passphrases
+        </a>
+      </li>
+    </ul>
+
+    <p style="margin-bottom:0;">
+      <strong>Tip:</strong> Do this ahead of time—SSH setup can take a few minutes, especially on managed devices.
+    </p>
+  </div>
+ <div class="callout">
+   <h3>SSH Setup Virtual Office Hour</h3>
+
+  <p>
+     Need help setting up SSH keys for GitHub?
+     We'll be holding a live virtual office hour to assist with SSH setup and troubleshooting.
+   </p>
+
+   <p>
+     <strong>When:</strong><br>
+     TBA, August X, 2026<br>
+     TBA Eastern Time
+   </p>
+
+   <p>
+     <strong>Where:</strong><br>
+     <a href="https://osu.zoom.us/j/91481691982?pwd=WNjlDEaXnP77MCQCPSHnYBiwyaYg1a.1&jst=1" target="_blank" rel="noopener">
+       Join via Zoom
+     </a>
+   </p>
+
+   <p style="margin-bottom:0;">
+     You are encouraged to attempt SSH setup beforehand and bring any errors or questions you encounter.
+   </p>
+ </div>
 </div>
