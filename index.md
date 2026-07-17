@@ -13,7 +13,7 @@ humantime: "9 am – 3 pm EST (August 17) and 11 am - 4 PM EST (August 21)."    
 startdate: 2026-08-17      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2026-08-21        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Matthew Thompson", "Jelmer Poelstra", "Elizabeth Campolongo", "Jessica Cooperstone", "Horacio Lopez-Nicora"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Menuka Bhandari", "TBA"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Kelsey Badger", "Menuka Bhandari", "Brandon Scholten", "Net Zhang"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["badger.60@osu.edu","thompson.4509@osu.edu", "poelstra.1@osu.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 
 # Optional variables
