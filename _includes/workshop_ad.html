@@ -11,40 +11,57 @@
 {% assign online = "false" %}
 {% endif %}
 
-<div class="p-5 mb-4 bg-light rounded-3">
-  <div class="container-fluid py-5 jumbo">
-    <div class="row">
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
       {% unless site.title == "Workshop Title" or site.title == "" %}
-      <h1 class="display-5 fw-bold">{{site.title}}</h1>
+      <h1>{{site.title}}</h1>
       {% endunless %}
       <h2>{{page.venue}}</h2>
-    </div>
-    <div class="row">
-    <div class="col-md-6">
-        {% if online == "true_public" %}
-        <p>Online (<a href="{{page.address}}">link</a>)</p>
-        {% elsif online == "true_private" %}
-        <p>Online</p>
-        {% endif %}
-        <p>{{page.humandate}}</p>
-        <p>{% if page.humantime %}{{page.humantime}}{% endif %}</p>
-    </div>
-    <div class="col-md-6">
-        <p>
-        <strong>Instructors:</strong>
-        {% if page.instructor %}
-        {{page.instructor | join: ', ' %}}
-        {% else %}
-        to be announced.
-        {% endif %}
-        </p>
-        {% if page.helper %}
-        <p>
-        <strong>Helpers:</strong>
-        {{page.helper | join: ', ' %}}
-        </p>
-        {% endif %}
-    </div>
+      <div class="row">
+        <div class="col-md-6">
+          {% if online == "true_public" %}
+          <p>Online (<a href="{{page.address}}">link</a>)</p>
+          {% elsif online == "true_private" %}
+          <p>Online</p>
+          {% endif %}
+          <p>{{page.humandate}}</p>
+          <p>{% if page.humantime %}{{page.humantime}}{% endif %}</p>
+        </div>
+        <div class="col-md-6">
+          <p>
+          <strong>Instructors:</strong>
+          {% if page.instructor %}
+          {{page.instructor | join: ', ' %}}
+          {% else %}
+          to be announced.
+          {% endif %}
+          </p>
+          {% if page.helper %}
+          <p>
+          <strong>Helpers:</strong>
+          {{page.helper | join: ', ' %}}
+          </p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p><a href="https://library.osu.edu/events/version-control-with-git-0">Register for R for Scientific Reproducibility (08-17)</a></p>
+          <p><a href="https://library.osu.edu/events/r-for-scientific-reproducibility-0">Register for Version Control with Git (08-21)</a></p>
+          <!-- <p style="color: grey;">Register for Version Control with Git (02-09)</p> -->
+          <!-- <p style="color: grey;">Register for R for Scientific Reproducibility (02-13)</p> -->
+          <!--
+          <p style="color: grey;">Follow this link to register</p>
+          -->
+          <p margin-top: 10px; style="font-size: 85%;"> This event is presented in partnership with members of <br>
+            the <a href="https://imageomics.org">Imageomics Institute</a>, the <a href="https://osu-codeclub.github.io/">OSU Code Club</a>, and the <a href="https://library.osu.edu/researchcommons">Research Commons</a>. </p>
+          <!--
+          <p style="color: red; font-weight: bold; margin-top: 10px; font-size: 90%;">Please Note: There is currently a waitlist for new registrants.</p>
+          -->
+          <!-- <p style="color: black; font-weight: bold; margin-top: 10px; font-size: 90%;">This workshop has concluded.</p> -->
+        </div>
+      </div>
     </div>
   </div>
 </div>
